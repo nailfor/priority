@@ -26,7 +26,7 @@ function pluginsList($new_plugins, $action_name, $action){
         if ($action == 'upgrade_plugin') { $version = $inCore->getPluginVersion($plugin) . ' &rarr; '. $plugin_obj->info['version']; }
 
         echo '<tr>';
-            echo '<td width="16"><img src="/admin/images/icons/hmenu/plugins.png" /></td>';
+            echo '<td width="16"><img src="'.ADMIN.'/images/icons/hmenu/plugins.png" /></td>';
             echo '<td><a style="font-weight:bold;font-size:14px" title="'.$action_name.' '.$plugin_obj->info['title'].'" href="index.php?view=install&do='.$action.'&id='.$plugin.'">'.$plugin_obj->info['title'].'</a> v'.$version.'</td>';
         echo '<tr>';
         echo '<tr>';
@@ -59,7 +59,7 @@ function componentsList($new_components, $action_name, $action){
             if ($action == 'upgrade_component') { $version = $inCore->getComponentVersion($component) . ' &rarr; '. $_component['version']; }
 
             echo '<tr>';
-                echo '<td width="16"><img src="/admin/images/icons/hmenu/plugins.png" /></td>';
+                echo '<td width="16"><img src="'.ADMIN.'/images/icons/hmenu/plugins.png" /></td>';
                 echo '<td><a style="font-weight:bold;font-size:14px" title="'.$action_name.' '.$_component['title'].'" href="index.php?view=install&do='.$action.'&id='.$component.'">'.$_component['title'].'</a> v'.$version.'</td>';
             echo '<tr>';
             echo '<tr>';
@@ -94,7 +94,7 @@ function modulesList($new_modules, $action_name, $action){
             if ($action == 'upgrade_module') { $version = $inCore->getModuleVersion($module) . ' &rarr; '. $_module['version']; }
 
             echo '<tr>';
-                echo '<td width="16"><img src="/admin/images/icons/hmenu/plugins.png" /></td>';
+                echo '<td width="16"><img src="'.ADMIN.'/images/icons/hmenu/plugins.png" /></td>';
                 echo '<td><a style="font-weight:bold;font-size:14px" title="'.$action_name.' '.$_module['title'].'" href="index.php?view=install&do='.$action.'&id='.$module.'">'.$_module['title'].'</a> v'.$version.'</td>';
             echo '<tr>';
             echo '<tr>';
@@ -191,7 +191,7 @@ function applet_install(){
         if ($error === true) {
             $inCore->installModule($_module, $_module['config']);
             cmsCore::addSessionMessage($_LANG['AD_MODULE'].' <strong>"'.$_module['title'].'"</strong> '.$_LANG['AD_SUCCESS'].$_LANG['AD_IS_INSTALL'], 'success');
-            cmsCore::redirect('/admin/index.php?view=modules');
+            cmsCore::redirect(ADMIN.'/index.php?view=modules');
         } else {
             cmsCore::addSessionMessage($error , 'error');
             cmsCore::redirectBack();
@@ -224,7 +224,7 @@ function applet_install(){
         if ($error === true) {
             $inCore->upgradeModule($_module, $_module['config']);
             cmsCore::addSessionMessage($_LANG['AD_MODULE'].' <strong>"'.$_module['title'].'"</strong> '.$_LANG['AD_SUCCESS'].$_LANG['AD_IS_UPDATE'], 'success');
-            cmsCore::redirect('/admin/index.php?view=modules');
+            cmsCore::redirect(ADMIN.'/index.php?view=modules');
         } else {
             cmsCore::addSessionMessage($error , 'error');
             cmsCore::redirectBack();
@@ -323,7 +323,7 @@ function applet_install(){
             }
 
             cmsCore::addSessionMessage($info_text, 'success');
-            cmsCore::redirect('/admin/index.php?view=components');
+            cmsCore::redirect(ADMIN.'/index.php?view=components');
         } else {
             cmsCore::addSessionMessage($error , 'error');
             cmsCore::redirectBack();
@@ -356,7 +356,7 @@ function applet_install(){
             $inCore->upgradeComponent($_component, $_component['config']);
             $info_text = $_LANG['AD_COMPONENT'].' <strong>"'.$_component['title'].'"</strong> '.$_LANG['AD_SUCCESS'].$_LANG['AD_IS_UPDATE'];
             cmsCore::addSessionMessage($info_text, 'success');
-            cmsCore::redirect('/admin/index.php?view=components');
+            cmsCore::redirect(ADMIN.'/index.php?view=components');
         } else {
             cmsCore::addSessionMessage($error , 'error');
             cmsCore::redirectBack();
@@ -386,7 +386,7 @@ function applet_install(){
 
         cmsCore::addSessionMessage($_LANG['AD_COMPONENT_IS_DELETED'], 'success');
 
-        cmsCore::redirect('/admin/index.php?view=components');
+        cmsCore::redirect(ADMIN.'/index.php?view=components');
 
     }
 
@@ -452,7 +452,7 @@ function applet_install(){
 
         if (!$error && $plugin->install()) {
             cmsCore::addSessionMessage($_LANG['AD_PLUGIN'].' <strong>"'.$plugin->info['title'].'"</strong> '.$_LANG['AD_SUCCESS'].$_LANG['AD_IS_INSTALL'].'. '.$_LANG['AD_ENABLE_PLUGIN'], 'success');
-            cmsCore::redirect('/admin/index.php?view=plugins');
+            cmsCore::redirect(ADMIN.'/index.php?view=plugins');
         }
 
         if ($error){
@@ -483,7 +483,7 @@ function applet_install(){
 
         if (!$error && $plugin->upgrade()) {
             cmsCore::addSessionMessage($_LANG['AD_PLUGIN'].' <strong>"'.$plugin->info['title'].'"</strong> '.$_LANG['AD_SUCCESS'].$_LANG['AD_IS_UPDATE'], 'success');
-            cmsCore::redirect('/admin/index.php?view=plugins');
+            cmsCore::redirect(ADMIN.'/index.php?view=plugins');
         }
 
         if ($error){
@@ -507,7 +507,7 @@ function applet_install(){
         $inCore->removePlugin($plugin_id);
 
         cmsCore::addSessionMessage($_LANG['AD_REMOVE_PLUGIN_OK'], 'success');
-        cmsCore::redirect('/admin/index.php?view=plugins');
+        cmsCore::redirect(ADMIN.'/index.php?view=plugins');
 
     }
 

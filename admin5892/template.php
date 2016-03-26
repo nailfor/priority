@@ -43,8 +43,8 @@
                         <table width="100%" height="69" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td width="230" align="left" valign="middle" style="padding-left:20px; padding-top:5px;">
-                                    <a href="/admin/">
-                                        <img src="images/toplogo.png" alt="<?php echo $_LANG['AD_ADMIN_PANEL']; ?>" border="0" />
+                                    <a href="<?php echo ADMIN;?>/">
+                                        <img src="/images/admin/toplogo.png" alt="<?php echo $_LANG['AD_ADMIN_PANEL']; ?>" border="0" />
                                     </a>
                                 </td>
                                 <td width="120">

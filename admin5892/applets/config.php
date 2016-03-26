@@ -116,7 +116,7 @@ function applet_config(){
 		<li><a href="#seq"><span><?php echo $_LANG['AD_SECURITY']; ?></span></a></li>
   </ul>
 
-	<form action="/admin/index.php?view=config" method="post" name="CFGform" target="_self" id="CFGform" style="margin-bottom:30px">
+    <form action=<?php echo ADMIN;?>"/index.php?view=config" method="post" name="CFGform" target="_self" id="CFGform" style="margin-bottom:30px">
     <input type="hidden" name="csrf_token" value="<?php echo cmsUser::getCsrfToken(); ?>" />
         <div id="basic">
 			<table width="720" border="0" cellpadding="5">
@@ -345,7 +345,7 @@ function applet_config(){
 					</td>
 					<td>
                         <select name="timezone" id="timezone" style="width:350px">
-                            <?php include(PATH.'/admin/includes/timezones.php'); ?>
+                            <?php include(PATH.ADMIN.'/includes/timezones.php'); ?>
                             <?php foreach($timezones as $tz) { ?>
                             <option value="<?php echo $tz; ?>" <?php if ($tz == $config['timezone']) { ?>selected="selected"<?php } ?>><?php echo $tz; ?></option>
                             <?php } ?>

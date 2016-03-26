@@ -313,7 +313,7 @@ function applet_users(){
             <td width="22">
                 <?php
                     if ($do=='edit'){
-                        echo '<a target="_blank" href="/users/'.$mod['login'].'" title="'.$_LANG['AD_USER_PROFILE'].'"><img src="images/icons/site.png" border="0" alt="'.$_LANG['AD_USER_PROFILE'].'"/></a>';
+                        echo '<a target="_blank" href="/users/'.$mod['login'].'" title="'.$_LANG['AD_USER_PROFILE'].'"><img src="/images/admin/icons/site.png" border="0" alt="'.$_LANG['AD_USER_PROFILE'].'"/></a>';
                     }
                 ?>
             </td>
@@ -358,7 +358,7 @@ function applet_users(){
             <td>
                 <?php
                     if ($do=='edit'){
-                        echo '<a target="_blank" href="?view=usergroups&do=edit&id='.$mod['group_id'].'"><img src="images/icons/edit.png" border="0" title="'.$_LANG['EDIT'].'"/></a>';
+                        echo '<a target="_blank" href="?view=usergroups&do=edit&id='.$mod['group_id'].'"><img src="/images/admin/icons/edit.png" border="0" title="'.$_LANG['EDIT'].'"/></a>';
                     }
                 ?>
             </td>

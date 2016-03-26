@@ -71,10 +71,10 @@ input[type="submit"]:hover{
     background: #1F3147;
 }
 #login {
-    background: url("images/auth/login.png") no-repeat scroll -6px -2px #FFF;
+    background: url("admin/auth/login.png") no-repeat scroll -6px -2px #FFF;
 }
 #pass {
-    background: url("images/auth/pass.png") no-repeat scroll -6px -2px #FFF;
+    background: url("admin/auth/pass.png") no-repeat scroll -6px -2px #FFF;
 }
 #copy, #copy a {
     color: #CCC;

@@ -29,7 +29,7 @@ function applet_phpinfo(){
 
 	<h3><?php echo $_LANG['AD_PHP_INFO']; ?></h3>
 
-    <iframe src="/admin/includes/phpinfo.php" style="border:none;width:100%;height:600px" />
+    <iframe src=<?php echo ADMIN;?>"/includes/phpinfo.php" style="border:none;width:100%;height:600px" />
 
 </div>
 <?php } ?>

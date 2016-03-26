@@ -62,14 +62,14 @@
                             </span>
                             <span style="padding-left: 15px;">
                                 <a class="uittip" title="<?php echo $_LANG['ADD_ARTICLE']; ?>" href="?view=content&do=add<?php if($category_id){ ?>&to=<?php echo $category_id; } ?>">
-                                    <img border="0" hspace="2" alt="<?php echo $_LANG['AD_ADD_ARTICLE']; ?>" src="images/actions/add.gif"/>
+                                    <img border="0" hspace="2" alt="<?php echo $_LANG['AD_ADD_ARTICLE']; ?>" src="/images/admin/actions/add.gif"/>
                                 </a>
                                 <?php if($category_id>1){ ?>
                                     <a class="uittip" title="<?php echo $_LANG['AD_EDIT_SECTION']; ?>" href="?view=cats&do=edit&id=<?php echo $category_id; ?>">
-                                        <img border="0" hspace="2" alt="<?php echo $_LANG['AD_EDIT_SECTION']; ?>" src="images/actions/edit.gif"/>
+                                        <img border="0" hspace="2" alt="<?php echo $_LANG['AD_EDIT_SECTION']; ?>" src="/images/admin/actions/edit.gif"/>
                                     </a>
                                     <a class="uittip" title="<?php echo $_LANG['AD_CATEGORY_DELETE']; ?>" onclick="deleteCat('<?php echo $current_cat; ?>', <?php echo $category_id; ?>)" href="#">
-                                        <img border="0" hspace="2" alt="<?php echo $_LANG['AD_CATEGORY_DELETE']; ?>" src="images/actions/delete.gif"/>
+                                        <img border="0" hspace="2" alt="<?php echo $_LANG['AD_CATEGORY_DELETE']; ?>" src="/images/admin/actions/delete.gif"/>
                                     </a>
                                 <?php } ?>
                             </span>
@@ -140,11 +140,11 @@
                                     <td>
                                         <?php if ($item['published']) { ?>
                                             <a class="uittip" id="publink<?php echo $item['id']; ?>" href="javascript:pub(<?php echo $item['id']; ?>, 'view=content&do=hide&id=<?php echo $item['id']; ?>', 'view=content&do=show&id=<?php echo $item['id']; ?>', 'off', 'on');" title="<?php echo $_LANG['HIDE']; ?>">
-                                                <img id="pub<?php echo $item['id']; ?>" border="0" src="images/actions/on.gif"/>
+                                                <img id="pub<?php echo $item['id']; ?>" border="0" src="/images/admin/actions/on.gif"/>
                                             </a>
                                         <?php } else { ?>
                                             <a class="uittip" id="publink<?php echo $item['id']; ?>" href="javascript:pub(<?php echo $item['id']; ?>, 'view=content&do=show&id=<?php echo $item['id']; ?>', 'view=content&do=hide&item_=<?php echo $item['id']; ?>', 'on', 'off');" title="<?php echo $_LANG['SHOW']; ?>">
-                                                <img id="pub<?php echo $item['id']; ?>" border="0" src="images/actions/off.gif"/>
+                                                <img id="pub<?php echo $item['id']; ?>" border="0" src="/images/admin/actions/off.gif"/>
                                             </a>
                                         <?php } ?>
                                     </td>
@@ -155,23 +155,23 @@
                                                 $display_move_down  = ($num<sizeof($items)-1) ? 'inline' : 'none';
                                                 $display_move_up    = ($num>0) ? 'inline' : 'none';
                                             ?>
-                                            <a class="move_item_down" href="javascript:void(0)" onclick="moveItem(<?php echo $item['id']; ?>, 1)" title="<?php echo $_LANG['AD_DOWN']; ?>" style="float:left;display:<?php echo $display_move_down; ?>"><img src="images/actions/down.gif" border="0"/></a>
-                                            <a class="move_item_up" href="javascript:void(0)" onclick="moveItem(<?php echo $item['id']; ?>, -1)" title="<?php echo $_LANG['AD_UP']; ?>" style="float:right;display:<?php echo $display_move_up; ?>"><img src="images/actions/top.gif" border="0"/></a>
+                                            <a class="move_item_down" href="javascript:void(0)" onclick="moveItem(<?php echo $item['id']; ?>, 1)" title="<?php echo $_LANG['AD_DOWN']; ?>" style="float:left;display:<?php echo $display_move_down; ?>"><img src="/images/admin/actions/down.gif" border="0"/></a>
+                                            <a class="move_item_up" href="javascript:void(0)" onclick="moveItem(<?php echo $item['id']; ?>, -1)" title="<?php echo $_LANG['AD_UP']; ?>" style="float:right;display:<?php echo $display_move_up; ?>"><img src="/images/admin/actions/top.gif" border="0"/></a>
                                         </td>
                                     <?php } ?>
                                     <td align="right">
                                         <div style="padding-right: 8px;">
                                             <a class="uittip" title="<?php echo $_LANG['AD_VIEW_ONLINE']; ?>" href="/<?php echo $item['seolink'];?>.html">
-                                                <img border="0" hspace="2" alt="<?php echo $_LANG['AD_VIEW_ONLINE']; ?>" src="images/actions/search.gif"/>
+                                                <img border="0" hspace="2" alt="<?php echo $_LANG['AD_VIEW_ONLINE']; ?>" src="/images/admin/actions/search.gif"/>
                                             </a>
                                             <a class="uittip" title="<?php echo $_LANG['EDIT']; ?>" href="?view=content&do=edit&id=<?php echo $item['id']; ?>">
-                                                <img border="0" hspace="2" alt="<?php echo $_LANG['EDIT']; ?>" src="images/actions/edit.gif"/>
+                                                <img border="0" hspace="2" alt="<?php echo $_LANG['EDIT']; ?>" src="/images/admin/actions/edit.gif"/>
                                             </a>
                                             <a class="uittip" title="<?php echo $_LANG['AD_TO_ARHIVE']; ?>" href="?view=content&do=arhive_on&id=<?php echo $item['id']; ?>">
-                                                <img border="0" hspace="2" alt="<?php echo $_LANG['AD_TO_ARHIVE']; ?>" src="images/actions/arhive_on.gif">
+                                                <img border="0" hspace="2" alt="<?php echo $_LANG['AD_TO_ARHIVE']; ?>" src="/images/admin/actions/arhive_on.gif">
                                             </a>
                                             <a class="uittip" title="<?php echo $_LANG['DELETE']; ?>" onclick="jsmsg('<?php echo $_LANG['DELETE'].' '.$item['title']; ?>?', '?view=content&do=delete&id=<?php echo $item['id']; ?>')" href="#">
-                                                <img border="0" hspace="2" alt="<?php echo $_LANG['DELETE']; ?>" src="images/actions/delete.gif"/>
+                                                <img border="0" hspace="2" alt="<?php echo $_LANG['DELETE']; ?>" src="/images/admin/actions/delete.gif"/>
                                             </a>
                                         </div>
                                     </td>

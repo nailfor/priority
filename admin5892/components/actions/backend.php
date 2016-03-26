@@ -35,7 +35,7 @@ if(!defined('VALID_CMS_ADMIN')) { die('ACCESS DENIED'); }
 			<tr>
 			  <td width="45px">
 				<a class="toolmenuitem" href="?view=components&do=config&id=<?php echo $id; ?>&opt=config" title="<?php echo $_LANG['AD_CONFIG']; ?>">
-				  <img src="images/toolmenu/config.gif" border="0">
+				  <img src="/images/admin/toolmenu/config.gif" border="0">
 				</a>
 			  </td>
 			  <td>

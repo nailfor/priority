@@ -66,12 +66,12 @@ function applet_components(){
 
 	if ($do == 'config'){
 
-        $file = PATH.'/admin/components/'.$com['link'].'/backend.php';
+        $file = PATH.ADMIN.'/components/'.$com['link'].'/backend.php';
 
         if (file_exists($file)){
             cpAddPathway($com['title'].' v'.$com['version'], '?view=components&do=config&id='.$com['id']);
             cmsCore::loadLanguage('components/'.$com['link']);
-            cmsCore::loadLanguage('admin/components/'.$com['link']);
+            cmsCore::loadLanguage(ADMIN.'/components/'.$com['link']);
             include $file; return;
         } else {
             cmsCore::redirect('index.php?view=components');
@@ -100,9 +100,9 @@ function applet_components(){
 
         if ($inUser->id > 1){
             foreach($adminAccess as $key=>$value){
-                if (mb_strstr($value, 'admin/com_')){
+                if (mb_strstr($value, ADMIN.'/com_')){
                     if ($where) { $where .= ' OR '; }
-                    $value = str_replace('admin/com_', '', $value);
+                    $value = str_replace(ADMIN.'/com_', '', $value);
                     $where .= "link='{$value}'";
                 }
             }

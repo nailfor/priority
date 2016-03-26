@@ -15,7 +15,7 @@ define('PATH', $_SERVER['DOCUMENT_ROOT']);
 define("VALID_CMS_ADMIN", 1);
 include(PATH.'/core/ajax/ajax_core.php');
 
-cmsCore::loadLanguage('admin/lang');
+cmsCore::loadLanguage(ADMIN.'/lang');
 
 if (!$inUser->is_admin) { cmsCore::halt($_LANG['ACCESS_DENIED']); }
 
@@ -87,7 +87,7 @@ if(cmsCore::inRequest('save')){
 
 } else {
 
-    cmsPage::includeTemplateFile('admin/translations.php', array(
+    cmsPage::includeTemplateFile(ADMIN.'/translations.php', array(
         'type'=>$type,
         'value'=>$value,
         'action'=>$_SERVER['REQUEST_URI']

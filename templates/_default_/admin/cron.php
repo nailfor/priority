@@ -29,24 +29,24 @@
                         <td>
                             <?php if ($item['is_enabled']) { ?>
                                 <a class="uittip" id="publink<?php echo $item['id']; ?>" href="javascript:pub(<?php echo $item['id']; ?>, 'view=cron&do=hide&id=<?php echo $item['id']; ?>', 'view=content&do=show&id=<?php echo $item['id']; ?>', 'off', 'on');" title="<?php echo $_LANG['AD_DO_DISABLE']; ?>">
-                                    <img id="pub<?php echo $item['id']; ?>" border="0" src="images/actions/on.gif"/>
+                                    <img id="pub<?php echo $item['id']; ?>" border="0" src="/images/admin/actions/on.gif"/>
                                 </a>
                             <?php } else { ?>
                                 <a class="uittip" id="publink<?php echo $item['id']; ?>" href="javascript:pub(<?php echo $item['id']; ?>, 'view=cron&do=show&id=<?php echo $item['id']; ?>', 'view=content&do=hide&item_=<?php echo $item['id']; ?>', 'on', 'off');" title="<?php echo $_LANG['AD_DO_ENABLE']; ?>">
-                                    <img id="pub<?php echo $item['id']; ?>" border="0" src="images/actions/off.gif"/>
+                                    <img id="pub<?php echo $item['id']; ?>" border="0" src="/images/admin/actions/off.gif"/>
                                 </a>
                             <?php } ?>
                         </td>
                         <td align="right">
                             <div style="padding-right: 8px;">
                                 <a class="uittip" title="<?php echo $_LANG['AD_PERFORM_TASK']?>" onclick="jsmsg('<?php echo $_LANG['AD_PERFORM_TASK']?> <?php echo $item['name']; ?>?', '?view=cron&do=execute&id=<?php echo $item['id']; ?>')" href="#">
-                                    <img border="0" hspace="2" alt="<?php echo $_LANG['AD_PERFORM_TASK']?>" src="images/actions/play.gif"/>
+                                    <img border="0" hspace="2" alt="<?php echo $_LANG['AD_PERFORM_TASK']?>" src="/images/admin/actions/play.gif"/>
                                 </a>
                                 <a class="uittip" title="<?php echo $_LANG['AD_EDIT_MISSION']; ?>" href="?view=cron&do=edit&id=<?php echo $item['id']; ?>">
-                                    <img border="0" hspace="2" alt="<?php echo $_LANG['AD_EDIT_MISSION']; ?>" src="images/actions/edit.gif"/>
+                                    <img border="0" hspace="2" alt="<?php echo $_LANG['AD_EDIT_MISSION']; ?>" src="/images/admin/actions/edit.gif"/>
                                 </a>
                                 <a class="uittip" title="<?php echo $_LANG['DELETE']; ?>" onclick="jsmsg('<?php echo $_LANG['AD_DELETE_TASK']; ?> <?php echo $item['name']; ?>?', '?view=cron&do=delete&id=<?php echo $item['id']; ?>')" href="#">
-                                    <img border="0" hspace="2" alt="<?php echo $_LANG['DELETE']; ?>" src="images/actions/delete.gif"/>
+                                    <img border="0" hspace="2" alt="<?php echo $_LANG['DELETE']; ?>" src="/images/admin/actions/delete.gif"/>
                                 </a>
                             </div>
                         </td>

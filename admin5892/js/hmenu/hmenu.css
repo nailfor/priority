@@ -95,32 +95,32 @@ ul.fleft {
     left				: 175px !important;
 }
 
-#hmenu li a.menu{ margin-left:5px; background:url(/admin/images/icons/hmenu/menu.png) no-repeat 6px 6px; }
-#hmenu li a.modules{ margin-left:5px; background:url(/admin/images/icons/hmenu/modules.png) no-repeat 6px 6px; }
-#hmenu li a.cats{ margin-left:5px; background:url(/admin/images/icons/hmenu/cats.png) no-repeat 6px 6px; }
-#hmenu li a.content{ margin-left:5px; background:url(/admin/images/icons/hmenu/content.png) no-repeat 6px 6px; }
-#hmenu li a.arhive{ margin-left:5px; background:url(/admin/images/icons/hmenu/arhive.png) no-repeat 6px 6px; }
-#hmenu li a.components{ margin-left:5px; background:url(/admin/images/icons/hmenu/components.png) no-repeat 6px 6px; }
-#hmenu li a.filters{ margin-left:5px; background:url(/admin/images/icons/hmenu/filters.png) no-repeat 6px 6px; }
-#hmenu li a.plugins{ margin-left:5px; background:url(/admin/images/icons/hmenu/plugins.png) no-repeat 6px 6px; }
-#hmenu li a.users{ margin-left:5px; background:url(/admin/images/icons/hmenu/users.png) no-repeat 6px 6px; }
-#hmenu li a.banlist{ margin-left:5px; background:url(/admin/images/icons/hmenu/banlist.png) no-repeat 6px 6px; }
-#hmenu li a.user{ margin-left:5px; background:url(/admin/images/icons/hmenu/user.png) no-repeat 6px 6px; }
-#hmenu li a.config{ margin-left:5px; background:url(/admin/images/icons/hmenu/config.png) no-repeat 6px 6px; }
-#hmenu li a.help{ margin-left:5px; background:url(/admin/images/icons/hmenu/help.png) no-repeat 6px 6px; }
-#hmenu li a.site{ margin-left:5px; background:url(/admin/images/icons/hmenu/site.png) no-repeat 6px 6px; }
-#hmenu li a.backup{ margin-left:5px; background:url(/admin/images/icons/hmenu/backup.png) no-repeat 6px 6px; }
-#hmenu li a.repair{ margin-left:5px; background:url(/admin/images/icons/hmenu/repair.png) no-repeat 6px 6px; }
-#hmenu li a.repairnested{ margin-left:5px; background:url(/admin/images/icons/hmenu/repairnested.png) no-repeat 6px 6px; }
-#hmenu li a.cron{ margin-left:5px; background:url(/admin/images/icons/hmenu/cron.png) no-repeat 6px 6px; }
-#hmenu li a.phpinfo{ margin-left:5px; background:url(/admin/images/icons/hmenu/php.png) no-repeat 6px 6px; }
-#hmenu li a.install{ margin-left:5px; background:url(/admin/images/icons/hmenu/install.png) no-repeat 6px 6px; }
+#hmenu li a.menu{ margin-left:5px; background:url(/images/admin/icons/hmenu/menu.png) no-repeat 6px 6px; }
+#hmenu li a.modules{ margin-left:5px; background:url(/images/admin/icons/hmenu/modules.png) no-repeat 6px 6px; }
+#hmenu li a.cats{ margin-left:5px; background:url(/images/admin/icons/hmenu/cats.png) no-repeat 6px 6px; }
+#hmenu li a.content{ margin-left:5px; background:url(/images/admin/icons/hmenu/content.png) no-repeat 6px 6px; }
+#hmenu li a.arhive{ margin-left:5px; background:url(/images/admin/icons/hmenu/arhive.png) no-repeat 6px 6px; }
+#hmenu li a.components{ margin-left:5px; background:url(/images/admin/icons/hmenu/components.png) no-repeat 6px 6px; }
+#hmenu li a.filters{ margin-left:5px; background:url(/images/admin/icons/hmenu/filters.png) no-repeat 6px 6px; }
+#hmenu li a.plugins{ margin-left:5px; background:url(/images/admin/icons/hmenu/plugins.png) no-repeat 6px 6px; }
+#hmenu li a.users{ margin-left:5px; background:url(/images/admin/icons/hmenu/users.png) no-repeat 6px 6px; }
+#hmenu li a.banlist{ margin-left:5px; background:url(/images/admin/icons/hmenu/banlist.png) no-repeat 6px 6px; }
+#hmenu li a.user{ margin-left:5px; background:url(/images/admin/icons/hmenu/user.png) no-repeat 6px 6px; }
+#hmenu li a.config{ margin-left:5px; background:url(/images/admin/icons/hmenu/config.png) no-repeat 6px 6px; }
+#hmenu li a.help{ margin-left:5px; background:url(/images/admin/icons/hmenu/help.png) no-repeat 6px 6px; }
+#hmenu li a.site{ margin-left:5px; background:url(/images/images/icons/hmenu/site.png) no-repeat 6px 6px; }
+#hmenu li a.backup{ margin-left:5px; background:url(/images/admin/icons/hmenu/backup.png) no-repeat 6px 6px; }
+#hmenu li a.repair{ margin-left:5px; background:url(/images/admin/icons/hmenu/repair.png) no-repeat 6px 6px; }
+#hmenu li a.repairnested{ margin-left:5px; background:url(/images/admin/icons/hmenu/repairnested.png) no-repeat 6px 6px; }
+#hmenu li a.cron{ margin-left:5px; background:url(/images/admin/icons/hmenu/cron.png) no-repeat 6px 6px; }
+#hmenu li a.phpinfo{ margin-left:5px; background:url(/images/admin/icons/hmenu/php.png) no-repeat 6px 6px; }
+#hmenu li a.install{ margin-left:5px; background:url(/images/admin/icons/hmenu/install.png) no-repeat 6px 6px; }
 
-#hmenu li a.add{ margin-left:5px; background:url(/admin/images/icons/hmenu/add.png) no-repeat 6px 6px; }
-#hmenu li a.list{ margin-left:5px; background:url(/admin/images/icons/hmenu/list.png) no-repeat 6px 6px; }
+#hmenu li a.add{ margin-left:5px; background:url(/images/admin/icons/hmenu/add.png) no-repeat 6px 6px; }
+#hmenu li a.list{ margin-left:5px; background:url(/images/admin/icons/hmenu/list.png) no-repeat 6px 6px; }
 
-#hmenu li a.com_rss{ margin-left:5px; background:url(/admin/images/icons/hmenu/com/com_rss.png) no-repeat 6px 6px; }
-#hmenu li a.com_arhive{ margin-left:5px; background:url(/admin/images/icons/hmenu/com/com_arhive.png) no-repeat 6px 6px; }
-#hmenu li a.com_banners{ margin-left:5px; background:url(/admin/images/icons/hmenu/com/com_banners.png) no-repeat 6px 6px; }
+#hmenu li a.com_rss{ margin-left:5px; background:url(/images/images/icons/hmenu/com/com_rss.png) no-repeat 6px 6px; }
+#hmenu li a.com_arhive{ margin-left:5px; background:url(/images/images/icons/hmenu/com/com_arhive.png) no-repeat 6px 6px; }
+#hmenu li a.com_banners{ margin-left:5px; background:url(/images/images/icons/hmenu/com/com_banners.png) no-repeat 6px 6px; }
 
-#hmenu li a.clearcache{ margin-left:5px; background:url(/admin/images/icons/hmenu/clearcache.png) no-repeat 6px 6px; }
+#hmenu li a.clearcache{ margin-left:5px; background:url(/images/admin/icons/hmenu/clearcache.png) no-repeat 6px 6px; }

@@ -15,10 +15,10 @@ define('PATH', $_SERVER['DOCUMENT_ROOT']);
 define("VALID_CMS_ADMIN", 1);
 include(PATH.'/core/ajax/ajax_core.php');
 
-cmsCore::includeFile('admin/includes/cp.php');
+cmsCore::includeFile(ADMIN.'/includes/cp.php');
 cmsCore::loadClass('formgen');
-cmsCore::loadLanguage('admin/lang');
-cmsCore::loadLanguage('admin/applets/applet_modules');
+cmsCore::loadLanguage(ADMIN.'/lang');
+cmsCore::loadLanguage(ADMIN.'/applets/applet_modules');
 
 if (!$inUser->is_admin) { cmsCore::halt($_LANG['ACCESS_DENIED']); }
 
@@ -35,8 +35,8 @@ if (!$mod) { cmsCore::halt(); }
 
 $mod_name = $mod['user'] ? '' : preg_replace('/[^a-z0-9_\-]/iu', '', $mod['content']);
 
-$xml_file = PATH.'/admin/modules/'.$mod_name.'/backend.xml';
-$php_file = PATH.'/admin/modules/'.$mod_name.'/backend.php';
+$xml_file = PATH.ADMIN.'/modules/'.$mod_name.'/backend.xml';
+$php_file = PATH.ADMIN.'/modules/'.$mod_name.'/backend.php';
 
 $mode       = 'none';
 $cfg_form   = '';
@@ -52,4 +52,4 @@ if (file_exists($xml_file)){
     $mode = 'custom';
 }
 
-cmsPage::includeTemplateFile('admin/modconfig.php');
+cmsPage::includeTemplateFile(ADMIN.'/modconfig.php');

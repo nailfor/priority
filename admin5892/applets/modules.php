@@ -47,7 +47,7 @@ function applet_modules(){
 
 		if (!$module_name) { cmsCore::redirect('index.php?view=modules&do=edit&id='.$id); }
 
-        $xml_file = PATH.'/admin/modules/'.$module_name.'/backend.xml';
+        $xml_file = PATH.ADMIN.'/modules/'.$module_name.'/backend.xml';
         $php_file = 'modules/'.$module_name.'/backend.php';
 
         if (!file_exists($xml_file)){
@@ -105,7 +105,7 @@ function applet_modules(){
             cmsCore::redirectBack();
         }
 
-        $xml_file = PATH.'/admin/modules/'.$module_name.'/backend.xml';
+        $xml_file = PATH.ADMIN.'/modules/'.$module_name.'/backend.xml';
         if (!file_exists($xml_file)){ cmsCore::halt(); }
 
         $cfg = array();

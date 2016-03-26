@@ -1218,7 +1218,7 @@ class cmsCore {
      * ====== DEPRECATED =========
      */
     public function initSmarty($tpl_folder, $tpl_file){
-        trigger_error('initSmarty is DEPRECATED, use cmsPage::initTemplate', E_USER_NOTICE);
+        //trigger_error('initSmarty is DEPRECATED, use cmsPage::initTemplate', E_USER_NOTICE);
         return cmsPage::initTemplate($tpl_folder, $tpl_file);
 
     }

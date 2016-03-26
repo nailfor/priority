@@ -34,7 +34,7 @@ function printLangPanel($target, $target_id, $field) {
 }
 
 function cpAccessDenied(){
-	cmsCore::redirect('/admin/index.php?view=noaccess');
+	cmsCore::redirect(ADMIN.'/index.php?view=noaccess');
 }
 
 function cpWarning($text){
@@ -70,7 +70,7 @@ function cpWhoOnline(){
 		$html .= '<table width="100%" cellpadding="2" cellspacing="2"><tr>';
 
 			$html .= '<td width="24" valign="top">';
-				$html .= '<img src="images/user.gif"/>';
+				$html .= '<img src="/images/admin/user.gif"/>';
 			$html .= '</td>';
 
 			$html .= '<td width="" valign="top">';
@@ -180,7 +180,7 @@ function cpMenu(){
                                 if ($com['published'] && (file_exists('components/'.$com['link'].'/backend.php')) && cmsUser::isAdminCan('admin/com_'.$com['link'], $adminAccess)){ ?>
 
                                     <li>
-                                        <a style="margin-left:5px; background:url(/admin/images/components/<?php echo $com['link']; ?>.png) no-repeat 6px 6px;" href="index.php?view=components&do=config&link=<?php echo $com['link']; ?>">
+                                        <a style="margin-left:5px; background:url(/images/admin/components/<?php echo $com['link']; ?>.png) no-repeat 6px 6px;" href="index.php?view=components&do=config&link=<?php echo $com['link']; ?>">
                                             <?php echo $com['title']; ?>
                                         </a>
                                     </li>
@@ -268,7 +268,7 @@ function cpToolMenu($toolmenu_list){
 
             $class_selected = ('?'.$_SERVER['QUERY_STRING'] == $toolmenu['link']) ? 'toolmenuitem_sel' : '';
             $target = isset($toolmenu['target']) ? 'target="'.$toolmenu['target'].'"' : '';
-			echo '<a class="'.$class_selected.' toolmenuitem uittip" href="'.$toolmenu['link'].'" title="'.$toolmenu['title'].'" '.$target.'><img src="images/toolmenu/'.$toolmenu['icon'].'" border="0" /></a>';
+			echo '<a class="'.$class_selected.' toolmenuitem uittip" href="'.$toolmenu['link'].'" title="'.$toolmenu['title'].'" '.$target.'><img src="/images/admin/toolmenu/'.$toolmenu['icon'].'" border="0" /></a>';
 		}
 		echo '</td></tr></table>';
 	}
@@ -282,7 +282,7 @@ function cpProceedBody(){
 
 	$file = $GLOBALS['applet'] . '.php';
 
-    if (!file_exists(PATH.'/admin/applets/'.$file)){
+    if (!file_exists(PATH.ADMIN.'/applets/'.$file)){
         cmsCore::error404();
     }
 
@@ -404,7 +404,7 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
 
 	if (cmsCore::inRequest('nofilter')){
 		unset($_SESSION['filter']);
-		cmsCore::redirect('/admin/index.php?'.str_replace('&nofilter', '', $_SERVER['QUERY_STRING']));
+		cmsCore::redirect(ADMIN.'/index.php?'.str_replace('&nofilter', '', $_SERVER['QUERY_STRING']));
 	}
 
 	$filter = false;
@@ -466,7 +466,7 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
 
 	if ($inDB->error()) {
 		unset($_SESSION['filter']);
-        cmsCore::redirect('/admin/index.php?'.$_SERVER['QUERY_STRING']);
+        cmsCore::redirect(ADMIN.'/index.php?'.$_SERVER['QUERY_STRING']);
 	}
 
 	$filters = 0; $f_html = '';
@@ -563,7 +563,7 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
                                         '<a class="lt_link" href="'.$link.'">'.$data.'</a>' :
                                         $data;
                                 echo '<td class="'.$row_class.'" valign="middle">
-                                            <span class="lt_link" style="padding:1px; padding-left:24px; background:url(/admin/images/components/'.$item['link'].'.png) no-repeat">'.$data.'</span>
+                                            <span class="lt_link" style="padding:1px; padding-left:24px; background:url('.ADMIN.'/images/components/'.$item['link'].'.png) no-repeat">'.$data.'</span>
                                       </td>'. "\n";
                             }
 						} else {
@@ -578,7 +578,7 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
 											$qs2 = cpAddParam($qs2, $ids, $item['id']);
 										$qs = "pub(".$item['id'].", '".$qs."', '".$qs2."', 'off', 'on');";
 										echo '<td class="'.$row_class.'" valign="middle">
-												<a title="'.$_LANG['HIDE'].'" class="uittip" id="publink'.$item['id'].'" href="javascript:'.$qs.'"><img id="pub'.$item['id'].'" src="images/actions/on.gif" border="0"/></a>
+												<a title="'.$_LANG['HIDE'].'" class="uittip" id="publink'.$item['id'].'" href="javascript:'.$qs.'"><img id="pub'.$item['id'].'" src="/images/admin/actions/on.gif" border="0"/></a>
 											 </td>'. "\n";
 									} else {
 										$qs = cpAddParam($_SERVER['QUERY_STRING'], $do, 'show'.$dos);
@@ -587,7 +587,7 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
 											$qs2 = cpAddParam($qs2, $ids, $item['id']);
 										$qs = "pub(".$item['id'].", '".$qs."', '".$qs2."', 'on', 'off');";
 										echo '<td class="'.$row_class.'" valign="middle">
-												<a title="'.$_LANG['SHOW'].'" class="uittip" id="publink'.$item['id'].'" href="javascript:'.$qs.'"><img id="pub'.$item['id'].'" src="images/actions/off.gif" border="0"/></a>
+												<a title="'.$_LANG['SHOW'].'" class="uittip" id="publink'.$item['id'].'" href="javascript:'.$qs.'"><img id="pub'.$item['id'].'" src="/images/admin/actions/off.gif" border="0"/></a>
 											 </td>'. "\n";
 									}
 								} else {
@@ -621,14 +621,14 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
                                 if (isset($_fields[$key]['do'])) { $do = 'do=config&id='.(int)$_REQUEST['id'].'&'.$_fields[$key]['do']; } else { $do = 'do'; }
 								if (isset($_fields[$key]['do_suffix'])) { $dos = $_fields[$key]['do_suffix']; $ids = 'item_id'; } else { $dos = ''; $ids = 'id'; }
 								echo '<td class="'.$row_class.'" valign="middle">
-									<a title="'.$_LANG['AD_DOWN'].'" href="?view='.$GLOBALS['applet'].'&'.$do.'=move_down&co='.$item[$_fields[$key]['field']].'&'.$ids.'='.$item['id'].'"><img src="images/actions/down.gif" border="0"/></a>';
+									<a title="'.$_LANG['AD_DOWN'].'" href="?view='.$GLOBALS['applet'].'&'.$do.'=move_down&co='.$item[$_fields[$key]['field']].'&'.$ids.'='.$item['id'].'"><img src="/images/admin/actions/down.gif" border="0"/></a>';
 									if ($table != 'cms_menu' && $table != 'cms_category'){
 										echo '<input class="lt_input" type="text" size="4" name="ordering[]" value="'.$item['ordering'].'" />';
 										echo '<input name="ids[]" type="hidden" value="'.$item['id'].'" />';
 									} else {
 										echo '<input class="lt_input" type="text" size="4" name="ordering[]" value="'.$item['ordering'].'" disabled/>';
 									}
-									echo '<a title="'.$_LANG['AD_UP'].'" href="?view='.$GLOBALS['applet'].'&'.$do.'=move_up&co='.$item[$_fields[$key]['field']].'&'.$ids.'='.$item['id'].'"><img src="images/actions/top.gif" border="0"/></a>'.
+									echo '<a title="'.$_LANG['AD_UP'].'" href="?view='.$GLOBALS['applet'].'&'.$do.'=move_up&co='.$item[$_fields[$key]['field']].'&'.$ids.'='.$item['id'].'"><img src="/images/admin/actions/top.gif" border="0"/></a>'.
 								'</td>'. "\n";
 							}
 						}
@@ -651,9 +651,9 @@ function cpListTable($table, $_fields, $_actions, $where='', $orderby='title'){
                                 }
 
 								if (!isset($_actions[$key]['confirm'])){
-									echo '<a href="'.$link.'" class="uittip" title="'.$title.'"><img hspace="2" src="images/actions/'.$icon.'" border="0" alt="'.$title.'"/></a>';
+									echo '<a href="'.$link.'" class="uittip" title="'.$title.'"><img hspace="2" src="/images/admin/actions/'.$icon.'" border="0" alt="'.$title.'"/></a>';
 								} else {
-									echo '<a href="#" class="uittip" onclick="jsmsg(\''.$_actions[$key]['confirm'].'\', \''.$link.'\')" title="'.$title.'"><img hspace="2" src="images/actions/'.$icon.'" border="0" alt="'.$title.'"/></a>';
+									echo '<a href="#" class="uittip" onclick="jsmsg(\''.$_actions[$key]['confirm'].'\', \''.$link.'\')" title="'.$title.'"><img hspace="2" src="/images/admin/actions/'.$icon.'" border="0" alt="'.$title.'"/></a>';
 								}
 							}
 						}

@@ -18,11 +18,12 @@ session_start();
 
 define('VALID_CMS', 1);
 define('VALID_CMS_ADMIN', 1);
+define('ADMIN', '/admin5892');
 
 define('PATH', $_SERVER['DOCUMENT_ROOT']);
 
 require(PATH.'/core/cms.php');
-require(PATH.'/admin/includes/cp.php');
+require(PATH.ADMIN.'/includes/cp.php');
 require(PATH.'/includes/tools.inc.php');
 
 $inCore = cmsCore::getInstance(false, true);
@@ -48,7 +49,7 @@ cmsCore::loadLanguage('admin/lang');
 
 //-------CHECK AUTHENTICATION--------------------------------------//
 if (!$inUser->is_admin){
-    include PATH.'/admin/login.php';
+    include PATH.ADMIN.'/login.php';
     cmsCore::halt();
 }
 //--------LOAD ACCESS OPTIONS LIST---------------------------------//
@@ -69,10 +70,10 @@ $GLOBALS['cp_page_body']  = '';
 $GLOBALS['cp_pathway']= array(
     array(
         'title'=>$_LANG['PATH_HOME'],
-        'link'=>'/admin/',
+        'link'=>ADMIN.'/',
     )
 );
 
 cpProceedBody();
 
-include(PATH.'/admin/template.php');
+include(PATH.ADMIN.'/template.php');

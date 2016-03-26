@@ -109,7 +109,7 @@ a:hover{
 	padding:10px;
 	padding-bottom:0px;
 	margin:0px;
-	background:url(../images/pwbg.jpg) repeat-x left top #FFF;
+	background:url(/images/admin/pwbg.jpg) repeat-x left top #FFF;
 }
 
 .pathwaylink{
@@ -246,7 +246,7 @@ table {
 .small_title .attention{
     padding:1px;
     padding-left:20px;
-    background:url(../images/icons/attention.png) no-repeat left center
+    background:url(/images/admin/icons/attention.png) no-repeat left center
 }
 .small_box{
 	margin-bottom:4px;
@@ -263,7 +263,7 @@ table {
     padding-left:20px;
     height:17px;
     line-height:17px;
-    background:url("../images/icons/site.png") no-repeat;
+    background:url("/images/admin/icons/site.png") no-repeat;
 }
 
 .upd_title{
@@ -276,7 +276,7 @@ table {
 }
 #menutype {
     padding-left:16px;
-    background:url(../images/icons/site.png) no-repeat;
+    background:url(/images/admin/icons/site.png) no-repeat;
 }
 
 #rss_link{
@@ -378,7 +378,7 @@ div.jdate{
 	padding-left:20px;
 	line-height:16px;
 	height:16px;
-	background:url(../images/icons/calendar.png) no-repeat left center;
+	background:url(/images/admin/icons/calendar.png) no-repeat left center;
 	margin-bottom:4px;
 	font-weight:bold;
 }
@@ -386,14 +386,14 @@ div.jclock{
 	padding-left:20px;
 	line-height:16px;
 	height:16px;
-	background:url(../images/icons/clock.png) no-repeat left center;
+	background:url(/images/admin/icons/clock.png) no-repeat left center;
 }
 
 div.juser{
 	padding-left:20px;
 	line-height:16px;
 	height:16px;
-	background:url(../images/icons/user.png) no-repeat left center;
+	background:url(/images/admin/icons/user.png) no-repeat left center;
 }
 div.juser a, div.jsite a{
 	color:#FFF;
@@ -404,20 +404,20 @@ div.jmessages{
 	padding-left:20px;
 	line-height:16px;
 	height:16px;
-	background:url(../images/icons/messages.png) no-repeat left center;
+	background:url(/images/admin/icons/messages.png) no-repeat left center;
 }
 div.jsite{
 	padding-left:20px;
 	line-height:16px;
 	height:16px;
-	background:url(../images/icons/site.png) no-repeat left center;
+	background:url(/images/admin/icons/site.png) no-repeat left center;
 }
 div.jlogout{
 	margin-top:4px;
 	padding-left:20px;
 	line-height:16px;
 	height:16px;
-	background:url(../images/icons/logout.png) no-repeat left center;
+	background:url(/images/admin/icons/logout.png) no-repeat left center;
 }
 div.jlogout a{
 	color:yellow;
@@ -501,15 +501,15 @@ div.filter {
     margin-left:15px;
 }
 
-.advert_billing{ margin-top:8px; background:url(/admin/images/advert/billing.png) no-repeat; }
-.advert_inmaps{ background:url(/admin/images/advert/maps.png) no-repeat; }
-.advert_inshop{ margin-top:0px; margin-bottom:8px; background:url(/admin/images/advert/shop.png) no-repeat; }
-.advert_invideo{ margin-top:0px; margin-bottom:8px; background:url(/admin/images/advert/video.png) no-repeat; }
-.advert_iaudio{ margin-top:0px; margin-bottom:8px; background:url(/admin/images/advert/audio.png) no-repeat; }
+.advert_billing{ margin-top:8px; background:url(/images/admin/advert/billing.png) no-repeat; }
+.advert_inmaps{ background:url(/images/admin/advert/maps.png) no-repeat; }
+.advert_inshop{ margin-top:0px; margin-bottom:8px; background:url(/images/admin/advert/shop.png) no-repeat; }
+.advert_invideo{ margin-top:0px; margin-bottom:8px; background:url(/images/admin/advert/video.png) no-repeat; }
+.advert_iaudio{ margin-top:0px; margin-bottom:8px; background:url(/images/admin/advert/audio.png) no-repeat; }
 
 #catalog_advert{
     padding-left:20px;
-    background:url(../images/components/shop.png) no-repeat left top;
+    background:url(/images/admin/components/shop.png) no-repeat left top;
 }
 
 .pagebar{
@@ -536,7 +536,7 @@ div.filter {
     height:17px;
     line-height:17px;
     padding: 1px 1px 1px 18px;
-    background: url(/admin/images/icons/hmenu/cats.png) no-repeat;
+    background: url(/images/admin/icons/hmenu/cats.png) no-repeat;
     overflow:hidden;
 }
 .cat_link div span{
@@ -549,19 +549,19 @@ div.filter {
 }
 .cat_add_link div{
     padding: 2px 2px 2px 18px;
-    background: url(/admin/images/icons/hmenu/add.png) no-repeat;
+    background: url(/images/admin/icons/hmenu/add.png) no-repeat;
 }
 #slide_cell{
     width:14px;
-    background:url(/admin/images/tree/slide.gif) no-repeat center center #EEE;
+    background:url(/images/admin/tree/slide.gif) no-repeat center center #EEE;
     cursor:pointer;
 }
 .unslided{
-    background:url(/admin/images/tree/unslide.gif) no-repeat center center #EEE !important;
+    background:url(/images/admin/tree/unslide.gif) no-repeat center center #EEE !important;
 }
 #cats_cell{
     padding:12px;
-    background:url(/admin/images/tree/tree_bg.jpg) repeat-y right top #EEE;
+    background:url(/images/admin/tree/tree_bg.jpg) repeat-y right top #EEE;
     width:240px;
 }
 
@@ -644,7 +644,7 @@ div.filter {
     display:block;
     width:  16px;
     height: 16px;
-    background: url(../images/icons/delete.png) no-repeat left 1px;
+    background: url(/images/admin/icons/delete.png) no-repeat left 1px;
     float:right;
     margin-left: 6px;
 }
@@ -710,14 +710,14 @@ div.filter {
 }
 
 .sess_messages .message_info {
-    background:url(../images/icons/info.png) no-repeat left center;
+    background:url(/images/admin/icons/info.png) no-repeat left center;
 }
 .sess_messages .message_success {
-    background:url(../images/icons/yes.png) no-repeat left center;
+    background:url(/images/admin/icons/yes.png) no-repeat left center;
     color: green;
 }
 .sess_messages .message_error {
-    background:url(../images/icons/no.png) no-repeat left center;
+    background:url(/images/admin/icons/no.png) no-repeat left center;
     color: red;
 }
 .userform_fieldtitle{ font-size: 14px; }
