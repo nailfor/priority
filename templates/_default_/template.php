@@ -59,14 +59,12 @@
         </header>
 
         <div class="top">
-topmenu
             <?php if($mod_count['topmenu']) { ?>
             <div class="topmenu">
                 <?php $this->printModules('topmenu'); ?>
             </div>
             <?php } ?>
 
-top
             <?php if ($mod_count['top']){ ?>
             <div class="topwide">
                 <?php $this->printModules('top'); ?>
@@ -77,7 +75,6 @@ top
         <div class="body">
             <div class="mainbody">
                 <div class="maintop">
-maintop
                     <?php $this->printModules('maintop'); ?>
                 </div>
 

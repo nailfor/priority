@@ -11,58 +11,42 @@
 //                                                                            //
 /******************************************************************************/
 
-function mod_blogs($mod, $cfg){
+function mod_submenu($mod, $cfg){
 
 	$inDB = cmsDatabase::getInstance();
+    
+    $sql = "
+        SELECT 
+            s.id,
+            s.name,
+            i.name as iname,
+            i.url,
+            i.img
+        FROM cms_submenu s
+        LEFT JOIN cms_submenuitems i ON i.menu_id = s.id
+        ORDER BY s.id, i.id
+    ";
+    $result = $inDB->query($sql) ;
 
-	$default_cfg = array (
-				  'sort' => 'pubdate',
-				  'owner' => 'user',
-				  'shownum' => 5,
-				  'minrate' => 0,
-                  'blog_id' => 0,
-				  'showrss' => 1
-				);
-	$cfg = array_merge($default_cfg, $cfg);
-
-	cmsCore::loadClass('blog');
-	$inBlog = cmsBlogs::getInstance();
-	$inBlog->owner = $cfg['owner'];
-
-	if($cfg['owner'] == 'club'){
-		cmsCore::loadModel('clubs');
-		$model = new cms_model_clubs();
-		$inDB->addSelect('b.user_id as bloglink');
-	} else {
-		cmsCore::loadModel('blogs');
-		$model = new cms_model_blogs();
-	}
-
-	// получаем аватары владельцев
-	//$inDB->addSelect('up.imageurl, img.fileurl');
-	//$inDB->addJoin('LEFT JOIN cms_user_profiles up ON up.user_id = u.id');
-	//$inDB->addJoin("LEFT JOIN cms_upload_images img ON img.target_id = p.id AND img.target = 'blog_post' AND img.component = 'blogs'");
-
-	$inBlog->whereOnlyPublic();
-
-	if($cfg['minrate']){
-		$inBlog->ratingGreaterThan($cfg['minrate']);
-	}
-
-	if($cfg['blog_id']){
-		$inBlog->whereBlogIs($cfg['blog_id']);
-	}
-
-    $inDB->orderBy('p.'.$cfg['sort'], 'DESC')->groupBy('p.id');
-    $inDB->limit($cfg['shownum']);
-
-	$posts = $inBlog->getPosts(false, $model);
-	if(!$posts){ return false; }
-
-	cmsPage::initTemplate('modules', $cfg['tpl'])->
-            assign('posts', $posts)->
-            assign('cfg', $cfg)->
-            display($cfg['tpl']);
+    $menu = []; $id=0;
+    if ($inDB->num_rows($result)){
+        while($row = $inDB->fetch_assoc($result)){
+            $id = $row['id'];
+            $menu[$id]['name'] = $row['name'];
+            if ($row['iname']) {
+                $menu[$id]['items'][] = [
+                    'name' => $row['iname'],
+                    'url' => $row['url'],
+                    'img' => $row['img']
+                ];
+            }
+        }
+    }
+    
+	$tpl = 'mod_submenu.tpl';
+    cmsPage::initTemplate('modules', $tpl)->
+            assign('menu', $menu)->
+            display($tpl);
 
 	return true;
 

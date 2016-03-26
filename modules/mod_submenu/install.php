@@ -33,10 +33,10 @@
         $_module['position']     = 'maintop';
 
         //автор
-        $_module['author']       = 'я';
+        $_module['author']       = 'Im';
 
         //текущая версия
-        $_module['version']      = '1.7';
+        $_module['version']      = '1.0';
 
         //
         // Настройки по-умолчанию
@@ -49,7 +49,7 @@
 
 // ========================================================================== //
 
-    function install_module_mod_blogs(){
+    function install_module_mod_submenu(){
 
         return true;
 
@@ -57,7 +57,7 @@
 
 // ========================================================================== //
 
-    function upgrade_module_mod_blogs(){
+    function upgrade_module_mod_submenu(){
 
         return true;
         
