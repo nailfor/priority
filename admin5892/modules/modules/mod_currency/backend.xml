@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<backend>    
+    <module>
+        <id>mod_currency</id>
+        <title>Курсы и конвертер валют</title>
+    </module>
+    <params>
+
+        <param type="list_db" multiple="1" name="output_tickers" title="Выводимые валюты." hint="В модуле будут показаны только те валюты, которые выбраны." src="cms_tickers" src_title="title" src_value="ticker" />
+
+        <param type="flag" name="show_other_tickers" title="Показывать блок с другими валютами." hint="Если включено, будет показан скрываемый блок с остальными валютами, которые не выбраны выше." default="on" />
+
+        <param type="flag" name="show_converter" title="Показывать конвертер валют." hint="Включить / выключить блок с конвертером валют." default="on" />
+
+        <param type="flag" name="conv_output_tickers" title="Конвертировать только выводимые валюты." hint="Если включено, то в списках направлений конвертера будут только выбранные для вывода валюты." default="off" />
+        <param type="list_db" name="conv_from" title="Конвертируемая валюта по умолчанию." hint="ВАЖНО! Если включена опция &amp;laquo;Конвертировать только выводимые валюты&amp;raquo;, то желательно указать одну из отмеченных для вывода валют." src="cms_tickers" src_title="title" src_value="ticker" tree="0">
+            <option title="Российский рубль, RUR" value="RUR" />
+	</param>
+        <param type="list_db" name="conv_to" title="Валюта по умолчанию, в которую конвертировать." hint="ВАЖНО! Если включена опция &amp;laquo;Конвертировать только выводимые валюты&amp;raquo;, то желательно указать одну из отмеченных для вывода валют." src="cms_tickers" src_title="title" src_value="ticker" tree="0">
+            <option title="Российский рубль, RUR" value="RUR" />
+	</param>
+
+
+    </params>
+</backend>
